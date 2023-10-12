@@ -27,7 +27,11 @@ do {
 
 //print all of the plain numbers in range from 2 to n
 let n = prompt("Enter a number:", "")
+prime:
 for (let i = 2; i < n; i++) {
-    if (i % 2 == 0) continue
-    console.log(i)
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue prime
+    }
+
+    console.log(n)
 }
